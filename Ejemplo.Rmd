@@ -1,0 +1,35 @@
+---
+title: "Ejemplo"
+author: "Giancarlo Casanova"
+date: "07-07-2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+```
+
+# Título 1
+
+## Título 2
+
+### Título 3
+
+* una
+* lista
+* de
+* cosas
+
+Para *cursivas* y **negritas**
+
+```{r}
+data(iris)
+```
+
+En el siguiente gráfico observamos las diferencias de largo de sepalo entre tres especies del género *iris*
+
+```{r}
+library(tidyverse)
+ggplot(iris, aes(x = Species, y = Sepal.Length)) + geom_boxplot() + theme_classic()
+```
+
